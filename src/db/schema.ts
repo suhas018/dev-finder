@@ -10,6 +10,7 @@ import {
 import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
 import type { AdapterAccount } from "next-auth/adapters";
+import { Languages } from "lucide-react";
 
 const connectionString = "postgres://postgres:postgres@localhost:5432/drizzle";
 const pool = postgres(connectionString, { max: 1 });
@@ -92,3 +93,13 @@ export const authenticators = pgTable(
     }),
   })
 );
+
+
+export const room = pgTable("room", {
+  userId: text("userId")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  name: text("name").notNull(),
+  Language: text("language").notNull(),
+  githubRepo: text("githubRepo"),
+});
