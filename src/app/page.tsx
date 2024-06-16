@@ -4,9 +4,6 @@ export default function LandingPage() {
 
   return (
     <div className="">
-      <head>
-      <meta name="google-site-verification" content="4JB3qLNOPCkXa1l6skEl0u944kZ493hZ1XJ3xNmTtXA" />
-      </head>
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
